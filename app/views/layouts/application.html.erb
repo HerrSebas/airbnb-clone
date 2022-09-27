@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <%= render "shared/navbar" %>
+    <% else %>
+      <%= render "pages/banner" %>
+    <% end  %>
     <%= render "shared/flashes" %>
     <%= yield %>
     <%= render "shared/footer" %>
