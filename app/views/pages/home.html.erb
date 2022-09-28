@@ -14,8 +14,12 @@
         <li class="list-group-item">$ <%= flat.price %> night</li>
       </ul>
       <div class="card-body">
-        <a href="#" class="btn btn-primary">Book now</a>
-        <a href="#" class="btn btn-light">Details</a>
+        <% if user_signed_in? %>
+          <%= link_to "Book now", new_user_booking_path(current_user), class: "btn btn-primary" %>
+          <%= link_to "Details", flat_path(flat), class: "btn btn-light" %>
+        <% else %>
+          <%= link_to "Details", flat_path(flat), class: "btn btn-light" %>
+        <% end  %>
       </div>
     </div>
   <% end %>
