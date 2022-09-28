@@ -1,10 +1,6 @@
-
-<div class="flats-category">
-  <p class="category-title">MY FLATS</p>
+<h1>Flats#index</h1>
 <ul>
 <% @flats.each do |flat| %>
   <li><%= link_to flat.title, flat_path(flat.id) %></li>
 <% end %>
 </ul>
-</div>
-
