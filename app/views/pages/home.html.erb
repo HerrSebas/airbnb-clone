@@ -1,31 +1,28 @@
 
 <div class="flats-category">
   <p class="category-title">MY FLATS</p>
-<ul>
-<% @flats.each do |flat| %>
-  <li><%= link_to flat.title, flat_path(flat.id) %></li>
-<% end %>
-</ul>
 </div>
 
-<div class="container">
-  <% @flats.each do |flat| %>
-  <div class="card" style="width: 18rem;">
-    <img src="https://img.freepik.com/free-vector/heart-logo-design-vector-minimal-style_53876-136742.jpg?w=740&t=st=1664332053~exp=1664332653~hmac=569482eab34115fa74fd629303699ee4b210daf31d5d75c2894cc86e1017b056" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title"><%= flat.title %></h5>
-      <p class="card-text"><%= flat.description %></p>
+<div class="main-container">
+  <div class="grid-container">
+    <% @flats.each do |flat| %>
+    <div class="card" style="width: 18rem;">
+      <img src="https://img.freepik.com/free-vector/heart-logo-design-vector-minimal-style_53876-136742.jpg?w=740&t=st=1664332053~exp=1664332653~hmac=569482eab34115fa74fd629303699ee4b210daf31d5d75c2894cc86e1017b056" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.title %></h5>
+        <p class="card-text"><%= flat.description %></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= flat.location %></li>
+        <li class="list-group-item"><% flat.category %></li>
+        <li class="list-group-item"><%= flat.capacity %> </li>
+        <li class="list-group-item"><%= flat.price %></li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
     </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item"><%= flat.location %></li>
-      <li class="list-group-item"><% flat.category %></li>
-      <li class="list-group-item"><%= flat.capacity %> </li>
-      <li class="list-group-item"><%= flat.price %></li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
+  <% end %>
   </div>
-<% end %>
 </div>
