@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_28_021209) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_28_141524) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.string "comment"
     t.date "chekin_date"
     t.date "checkout_date"
     t.bigint "user_id", null: false

@@ -1,0 +1,6 @@
+<%= simple_form_for [@user, @booking] do |f| %>
+  <%= f.input :chekin_date %>
+  <%= f.input :checkout_date %>
+  <%= f.association :flat %>
+  <%= f.submit class: 'btn-submit mt-3' %>
+<% end %>
