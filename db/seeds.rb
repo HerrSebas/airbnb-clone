@@ -16,5 +16,6 @@ puts "Creating 12 fake flats"
     price: Faker::Number.decimal(l_digits: 3, r_digits: 2),
     description: Faker::Lorem.sentence,
     capacity: Faker::Number.within(range: 1..10),
-    category: "Room")
+    category: "Room"
+  )
 end
