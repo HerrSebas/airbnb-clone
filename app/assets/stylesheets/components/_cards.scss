@@ -1,7 +1,12 @@
-.body {
-  Circular: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+.main-container {
+  display: flex;
+  padding: 16px;
 }
 
-.card {
-  border-radius: 12px;
+.grid-container {
+  display: flex;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  flex-wrap: wrap;
 }

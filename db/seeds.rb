@@ -13,8 +13,9 @@ puts "Creating 12 fake flats"
   Flat.create(
     title: Faker::Book.title,
     location: Faker::Nation.capital_city,
-    price: Faker::Number.number,
+    price: Faker::Number.decimal(l_digits: 3, r_digits: 2),
     description: Faker::Lorem.sentence,
     capacity: Faker::Number.within(range: 1..10),
-    category: "Room")
+    category: "Room"
+  )
 end
