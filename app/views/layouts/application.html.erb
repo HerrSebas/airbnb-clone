@@ -1,21 +1,23 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <title>AirbnbClone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script-->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
+    <%= current_user %>
     <% if user_signed_in? %>
       <%= render "shared/navbar" %>
     <% else %>
       <%= render "pages/banner" %>
-    <% end  %>
+    <% end %>
     <%= render "shared/flashes" %>
     <%= yield %>
     <%= render "shared/footer" %>
