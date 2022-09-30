@@ -6,14 +6,15 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @user = User.find(params[:user_id])
+    @flat = Flat.find(params[:flat_id])
   end
   def create
     @booking = Booking.new(booking_params)
-    @user = User.find(params[:user_id])
-    @booking.user = @user
+    @flat = Flat.find(params[:flat_id])
+    @booking.flat = @flat
+    @booking.user = current_user
     if @booking.save
-      redirect_to user_bookings_path(@user)
+      redirect_to bookings_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -22,6 +23,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:checkin_date, :checkout_date, :flat_id)
+    params.require(:booking).permit(:checkin_date, :checkout_date)
   end
 end
