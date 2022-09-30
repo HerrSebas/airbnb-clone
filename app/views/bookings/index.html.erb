@@ -1,5 +1,14 @@
-<% @bookings.each do |booking| %>
-  <ul>
-    <h1><%= booking.flat.title %></h1>
-  </ul>
-  <% end %>
+<div class="main-container">
+  <div class="grid-container">
+    <% @bookings.each do |booking| %>
+    <div class="card" style="width: 18rem;">
+      <img src="https://pic.onlinewebfonts.com/svg/img_162330.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= booking.flat.title %></h5>
+        <p class="card-text"><%=booking.flat.location%></p>
+        <%= link_to "Flat Details", flat_path(booking.flat), class: "btn btn-primary" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
