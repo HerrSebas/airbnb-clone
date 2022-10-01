@@ -2,7 +2,7 @@
   <div class="grid-container">
     <% @flats.each do |flat| %>
     <div class="card" style="width: 18rem;">
-      <img src="https://pic.onlinewebfonts.com/svg/img_162330.png" class="card-img-top" alt="...">
+      <%= cl_image_tag flat.photo.key,class: "card-img-top" %>
       <div class="card-body">
         <h5 class="card-title"><%= flat.title %></h5>
         <p class="card-text"><%= flat.description %></p>
