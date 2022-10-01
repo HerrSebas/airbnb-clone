@@ -1,31 +1,23 @@
 <div class="container m-4 d-flex">
-  <div class="p-4 flex-fill">
-    <h1><%= @flat.title %></h1>
-    <h3><%= @flat.description %></h3>
+  <div class="row g-2">
+    <div class="col-6">
+      <div class="p-4 flex-fill">
+        <h1><%= @flat.title %></h1>
+        <h3 class="text-muted"><%= @flat.description %></h3>
+        <p>Located in <%= @flat.location %>, this flat has capacity for <%= @flat.capacity %> guest, you will have a <%= @flat.category %> just for yourself</p>
+      </div>
+    </div>
 
-    <p>Located in <%= @flat.location %>, this flat has capacity for <%= @flat.capacity %> guest, you will have a <%= @flat.category %> just for yourself</p>
-  </div>
-  <div class="card text-center col-md-4 ms-auto p-2 flex-fill" style="width: 18rem; ">
-  <div class="card-body">
-    <h5 class="card-title fw-bold">$<%= @flat.price %> USD</h5>
-    <h6 class="card-subtitle mb-2 text-muted">night</h6>
-    <p class="card-text">
-      <div class="elem-group inlined col-mb-3 pb-2">
-        <label for="checkin-date">Check-in Date</label>
-        <input type="date" id="checkin-date" name="checkin" required>
+    <div class="col-6">
+      <div class="card text-center col-md-6 ms-auto p-2 flex-fill" style="width: 430px;">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">$<%= @flat.price %> USD</h5>
+          <h6 class="card-subtitle mb-2 text-muted">night</h6>
+          <p class="card-text">
+            <%= render "bookings/form" %>
+          </p>
+        </div>
       </div>
-      <div class="elem-group inlined col-mb-3 pb-2">
-        <label for="checkout-date">Check-out Date</label>
-        <input type="date" id="checkout-date" name="checkout" required>
-      </div>
-      <div class="elem-group inlined col-mb-3">
-        <label for="adult">Adults</label>
-        <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
-      </div>
-    </p>
-    <div class="d-grid gap-2 col-mb-3">
-      <button type="button" class="btn btn-success">Reserve</button>
     </div>
   </div>
-</div>
 </div>
