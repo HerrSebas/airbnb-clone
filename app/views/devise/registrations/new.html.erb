@@ -11,7 +11,8 @@
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
         </div>
         <div class="mb-3">
-        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.label :photo, class: "form-label" %>
+        <%= f.input :photo, as: :file %>
         </div>
 
         <div class="row mb-4">
