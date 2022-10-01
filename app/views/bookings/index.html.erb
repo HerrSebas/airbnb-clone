@@ -4,6 +4,7 @@
     <div class="card" style="width: 18rem;">
       <% if booking.flat.photo.present? %>
         <%= cl_image_tag booking.flat.photo.key, class: "card-img-top" %>
+      <% end %>
       <div class="card-body">
         <h5 class="card-title"><%= booking.flat.title %></h5>
         <p class="card-text"> <%=booking.flat.location%> <p> Check-in: <%= booking.chekin_date %>, check-out: <%= booking.checkout_date %> </p></p>
