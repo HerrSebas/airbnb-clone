@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!
+
   def index
     @bookings = Booking.where(user: current_user)
   end
@@ -8,6 +9,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @flat = Flat.find(params[:flat_id])
   end
+
   def create
     @booking = Booking.new(booking_params)
     @flat = Flat.find(params[:flat_id])

@@ -1,16 +1,10 @@
 <div class="container m-4 text-center p-2 flex-fill">
   <h1 class=mb-6>Your trip</h1>
 
-  <%= simple_form_for [@flat, @booking] do |f| %>
-    <div class="elem-group inlined col-mb-3 pb-2">
-      <%= f.input :chekin_date %>
-    </div>
-    <div class="elem-group inlined col-mb-3 pb-2">
-      <%= f.input :checkout_date %>
-    </div>
-    <div class="d-grid gap-2 col-mb-3">
-      <%= f.submit class: 'btn-submit mt-3' %>
-    </div>
+  <%= bootstrap_form_for [@flat, @booking] do |f| %>
+      <%= f.date_field :chekin_date %>
+      <%= f.date_field :checkout_date %>
+      <%= f.submit "create booking" %>
   <% end %>
 </div>
 
