@@ -5,7 +5,7 @@
       <img src="https://pic.onlinewebfonts.com/svg/img_162330.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title"><%= booking.flat.title %></h5>
-        <p class="card-text"><%=booking.flat.location%></p>
+        <p class="card-text"> <%=booking.flat.location%> <p> Check-in: <%= booking.chekin_date %>, check-out: <%= booking.checkout_date %> </p></p>
         <%= link_to "Flat Details", flat_path(booking.flat), class: "btn btn-primary" %>
       </div>
     </div>

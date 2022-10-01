@@ -1,5 +1,16 @@
-<%= simple_form_for [@flat, @booking] do |f| %>
-  <%= f.input :chekin_date %>
-  <%= f.input :checkout_date %>
-  <%= f.submit class: 'btn-submit mt-3' %>
-<% end %>
+<div class="grid text-center m-4 p-8 flex-fill">
+  <h1 class=mb-6>Your trip</h1>
+  <div class="g-col-6 g-col-md-4">
+    <%= simple_form_for [@flat, @flat.bookings.build] do |f| %>
+    <div class="elem-group inlined mb-3 pb-3">
+      <%= f.input :chekin_date %>
+    </div>
+    <div class="elem-group inlined mb-3 pb-3">
+      <%= f.input :checkout_date %>
+    </div>
+    <div class="gap-2 mx-auto">
+      <%= f.submit class: 'btn-submit mt-3' %>
+    </div>
+      <% end %>
+  </div>
+</div>
