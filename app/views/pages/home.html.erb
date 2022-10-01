@@ -22,3 +22,6 @@
   <% end %>
   </div>
 </div>
+<% if user_signed_in? %>
+  <%= render "shared/new_flat_button" %>
+  <% end %>

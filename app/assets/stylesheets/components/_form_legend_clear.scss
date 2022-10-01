@@ -5,7 +5,7 @@
 // input and has no visual effect. Here we try to fix matters by
 // applying the clear to the div wrapping the first following radio button
 // or checkbox.
-legend ~ div.form-check:first-of-type {
+legend~div.form-check:first-of-type {
   clear: left;
 }
 
@@ -16,6 +16,10 @@ legend ~ div.form-check:first-of-type {
   align-items: center;
   margin-left: 60px;
   margin-right: 60px;
+}
+
+.container-views {
+  padding: 30px;
 }
 
 h1 {
