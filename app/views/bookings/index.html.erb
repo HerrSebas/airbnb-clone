@@ -1,5 +1,13 @@
-<% @bookings.each do |booking| %>
-  <ul>
-    <h1><%= booking.flat.title %></h1>
-  </ul>
-  <% end %>
+<div class="conatiner m-4">
+  <div class="card">
+    <div class="card-header">
+      Booked!
+    </div>
+    <div class="card-body">
+    <% @bookings.each do |booking| %>
+      <h5 class="card-title"><%= booking.flat.title %></h5>
+      <p class="card-text">Remember, your check-in date is on <%= booking.chekin_date %> and your check-out date is on <%= booking.checkout_date %></p>
+    <% end %>
+    </div>
+  </div>
+</div>

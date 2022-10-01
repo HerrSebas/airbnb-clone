@@ -1,7 +1,7 @@
 <div class="grid text-center m-4 p-8 flex-fill">
   <h1 class=mb-6>Your trip</h1>
   <div class="g-col-6 g-col-md-4">
-    <%= simple_form_for [@flat, @booking] do |f| %>
+    <%= simple_form_for [@flat, @flat.bookings.build] do |f| %>
     <div class="elem-group inlined mb-3 pb-3">
       <%= f.input :chekin_date %>
     </div>
@@ -14,20 +14,3 @@
       <% end %>
   </div>
 </div>
-
-<!--<div class="elem-group inlined col-mb-3 pb-2">
-        <label for="checkin-date">Check-in Date</label>
-        <input type="date" id="checkin-date" name="checkin" required>
-      </div>
-      <div class="elem-group inlined col-mb-3 pb-2">
-        <label for="checkout-date">Check-out Date</label>
-        <input type="date" id="checkout-date" name="checkout" required>
-      </div>
-      <div class="elem-group inlined col-mb-3">
-        <label for="adult">Adults</label>
-        <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
-      </div>
-    </p>
-    <div class="d-grid gap-2 col-mb-3">
-      <button type="button" class="btn btn-success">Reserve</button>
-</div> -->
