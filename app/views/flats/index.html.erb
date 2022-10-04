@@ -9,7 +9,8 @@
         <div class="card-body">
           <h5 class="card-title"><%= flat.title %></h5>
           <p class="card-text"> <%= flat.location%></p>
-          <%= link_to "Flat Details", flat_path(flat), class: "btn btn-primary" %>
+          <%= link_to "Edit flat", edit_flat_path(flat), class: "btn btn-primary" %>
+          <%= link_to "Delete flat", flat_path(flat),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
         </div>
       </div>
       <% end %>

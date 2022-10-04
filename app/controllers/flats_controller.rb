@@ -26,16 +26,27 @@ class FlatsController < ApplicationController
   end
 
   def edit
+    @flat = Flat.find(params[:id])
     authorize @flat
   end
 
   def update
+    @flat = Flat.find(params[:id])
     authorize @flat
+    if @flat.update(flat_params)
+      redirect_to @flat
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
+    @flat = Flat.find(params[:id])
     authorize @flat
+    @flat.destroy
+    redirect_to flats_path, status: :see_other
   end
+
   private
 
   def flat_params
