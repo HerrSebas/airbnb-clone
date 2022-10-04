@@ -1,6 +1,18 @@
-<h1>Flats#index</h1>
-<ul>
-<% @flats.each do |flat| %>
-  <li><%= link_to flat.title, flat_path(flat.id) %></li>
-<% end %>
-</ul>
+<div class="main-container">
+  <div class="grid-container">
+    <% if @flats %>
+      <% @flats.each do |flat| %>
+      <div class="card" style="width: 18rem;">
+        <% if flat.photo.present? %>
+          <%= cl_image_tag flat.photo.key, class: "card-img-top" %>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.title %></h5>
+          <p class="card-text"> <%= flat.location%></p>
+          <%= link_to "Flat Details", flat_path(flat), class: "btn btn-primary" %>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
