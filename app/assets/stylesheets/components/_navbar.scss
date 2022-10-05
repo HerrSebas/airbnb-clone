@@ -1,6 +1,15 @@
+.main-container-navbar {
+  display: flex;
+  padding: 10px;
+  text-decoration: unset;
+  align-items: center;
+  color: #ffffff;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: #0E4956;
+  height: 75px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,13 +17,14 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 50px;
 }
 
 h1 {
   font-size: 40px;
   font-weight: 700;
-  color: #fff
+  color: #fff;
+  display: flex;
 }
 
 h3 {
