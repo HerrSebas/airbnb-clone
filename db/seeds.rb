@@ -21,7 +21,7 @@ puts "Creating 12 fake flats"
   )
   file = URI.open("https://source.unsplash.com/random/?hostel,travel")
   flat.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-  flat.save
+  flat.save!
 end
 
 
