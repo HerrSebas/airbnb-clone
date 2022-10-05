@@ -6,7 +6,6 @@ ruby "3.1.2"
 # Gemas para el proyecto
 gem "faker"
 
-
 gem "devise-i18n"
 
 
@@ -16,6 +15,7 @@ gem "rails", "~> 7.0.4"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+gem "pundit"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 

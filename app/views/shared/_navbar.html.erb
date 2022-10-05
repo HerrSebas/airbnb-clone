@@ -22,14 +22,17 @@
           <li class="nav-item active">
             <%= link_to "Bookings", bookings_path, class: "nav-link navlink-color" %>
           </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link navlink-color" %>
-          </li>
+
+          <% if current_user.flats.size > 0 %>
+            <li class="nav-item">
+              <%= link_to "My Flats", flats_path, class: "nav-link navlink-color" %>
+            </li>
+          <% end  %>
           <li class="nav-item dropdown">
             <% if current_user.photo.present? %>
             <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% else %>
-            <%= link_to "dropdown", destroy_user_session_path, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://thumbs.dreamstime.com/z/default-avatar-profile-icon-vector-user-image-179582665.jpg" />
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Profile", "#", class: "dropdown-item" %>
