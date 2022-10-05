@@ -23,11 +23,16 @@
             <%= link_to "Bookings", bookings_path, class: "nav-link navlink-color" %>
           </li>
 
+          <li class="nav-item">
+            <%= link_to "Reviews", "#", class: "nav-link navlink-color" %>
+          </li>
+          
           <% if current_user.flats.size > 0 %>
             <li class="nav-item">
               <%= link_to "My Flats", flats_path, class: "nav-link navlink-color" %>
             </li>
           <% end  %>
+
           <li class="nav-item dropdown">
             <% if current_user.photo.present? %>
             <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
