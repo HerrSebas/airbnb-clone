@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
+  get "/pages/profile", to: "pages#profile"
 
   resources :flats, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
     resources :bookings, only: [:new, :create]
