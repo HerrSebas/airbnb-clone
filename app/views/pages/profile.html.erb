@@ -1,0 +1,8 @@
+<div class="container">
+  <ul>
+    <li>Name: <%= current_user.name %></li>
+    <li>Last name: <%= current_user.last_name %></li>
+    <li>Phone number: <%= current_user.phone %></li>
+  </ul>
+  <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-primary" %>
+</div>
