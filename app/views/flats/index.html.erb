@@ -1,6 +1,19 @@
-<h1>Flats#index</h1>
-<ul>
-<% @flats.each do |flat| %>
-  <li><%= link_to flat.title, flat_path(flat.id) %></li>
-<% end %>
-</ul>
+<div class="main-container">
+  <div class="grid-container">
+    <% if @flats %>
+      <% @flats.each do |flat| %>
+      <div class="card" style="width: 18rem;">
+        <% if flat.photo.present? %>
+          <%= cl_image_tag flat.photo.key, class: "card-img-top" %>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.title %></h5>
+          <p class="card-text"> <%= flat.location%></p>
+          <%= link_to "Edit flat", edit_flat_path(flat), class: "btn btn-primary" %>
+          <%= link_to "Delete flat", flat_path(flat),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
