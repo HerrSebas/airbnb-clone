@@ -1,4 +1,6 @@
-<div class="container">
+<!--Sign up /users/sign_up-->
+
+<div class="container m-4 pt-4">
   <h2>Sign up</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
@@ -25,7 +27,6 @@
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email" } %>
-z
       <%= f.input :password,
                   required: true,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
