@@ -1,8 +1,9 @@
-<div class="container">
+<div class="container m-4">
+  <h3 class="text-dark py-4">Your information</h3>
   <ul>
-    <li>Name: <%= current_user.name %></li>
-    <li>Last name: <%= current_user.last_name %></li>
-    <li>Phone number: <%= current_user.phone %></li>
+    <li class="py-2">Name: <%= current_user.name %></li>
+    <li class="py-2">Last name: <%= current_user.last_name %></li>
+    <li class="py-2">Phone number: <%= current_user.phone %></li>
   </ul>
-  <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-primary" %>
+  <%= link_to "Edit profile", edit_user_registration_path, class: "button-50" %>
 </div>

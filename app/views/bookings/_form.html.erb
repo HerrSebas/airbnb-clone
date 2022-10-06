@@ -1,16 +1,14 @@
-<div class="grid text-center m-4 p-8 flex-fill">
-  <h1 class="mb-6">Your trip</h1>
-  <div class="g-col-6 g-col-md-4">
-    <%= simple_form_for [@flat, @flat.bookings.build] do |f| %>
-    <div class="elem-group inlined mb-3 pb-3">
-      <%= f.input :chekin_date %>
-    </div>
-    <div class="elem-group inlined mb-3 pb-3">
-      <%= f.input :checkout_date %>
-    </div>
-    <div class="gap-2 mx-auto">
-      <%= f.submit class: 'button-50' %>
-    </div>
-      <% end %>
+  <div class="text-center grid p-4 flex-fill">
+    <h2 class=" py-1">Your trip</h2>
+      <%= simple_form_for [@flat, @flat.bookings.build] do |f| %>
+      <div class="elem-group inlined py-4">
+        <%= f.input :chekin_date %>
+      </div>
+      <div class="elem-group inlined pb-4">
+        <%= f.input :checkout_date %>
+      </div>
+      <div class="mt-4">
+        <%= f.submit class: 'button-50' %>
+      </div>
+        <% end %>
   </div>
-</div>

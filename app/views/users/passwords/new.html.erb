@@ -2,7 +2,7 @@
 
 <div class="container m-4 pt-4">
 
-  <h2 class="mb-6">Forgot your password?</h2>
+  <h2 class="mb-6">Forgot password?</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
     <%= f.error_notification %>
@@ -15,7 +15,7 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Send me reset password instructions" %>
+      <%= f.button :submit class: 'button-50' , "Send me reset password instructions" %>
     </div>
   <% end %>
 
