@@ -1,13 +1,14 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
 
   <div class="container-fluid">
-    <div><h1>
-        <i class="fa-solid fa-house-user">
-        <span>
-        <%= link_to "Airtnt", root_path, class: "main-container logo" %> </i></h1>
-      </div>
+    <div>
+      <h1>
+        <i class="fa-solid fa-house-user"></i>
+        <%= link_to "Airtnt", root_path, class: "main-container-navbar logo" %>
+      </h1>
+    </div>
 
-    <h3> Bienvenido, <%= current_user.name %>!</h3>
+    <h3> Bienvenido, <%= current_user.name.capitalize %>!</h3>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
