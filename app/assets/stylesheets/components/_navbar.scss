@@ -1,6 +1,4 @@
 .main-container-navbar {
-  display: flex;
-  padding: 10px;
   text-decoration: unset;
   align-items: center;
   color: #ffffff;
@@ -10,6 +8,8 @@
   justify-content: space-between;
   background: #0E4956;
   height: 75px;
+  display: flex;
+  padding: 10px;
 }
 
 .navbar-lewagon .navbar-collapse {
