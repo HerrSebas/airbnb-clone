@@ -7,6 +7,10 @@ class FlatsController < ApplicationController
   def show
     @flat = Flat.find(params[:id])
     authorize @flat
+    @reviews = Review.where(flat: @flat)
+    @review = Review.new
+    @review.flat = @flat
+    @review.user = current_user
   end
 
   def new
@@ -52,4 +56,5 @@ class FlatsController < ApplicationController
   def flat_params
     params.require(:flat).permit(:title, :location, :price, :description, :capacity, :category, :photo)
   end
+
 end

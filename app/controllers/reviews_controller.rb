@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
 
   def create
     @flat = Flat.find(params[:flat_id])
-    @review = Review.new(review_params) 
+    @review = Review.new(review_params)
     @review.flat = @flat
     @review.user = current_user
     authorize @review
@@ -19,6 +19,7 @@ class ReviewsController < ApplicationController
   end
 
   def index
+    @reviews = policy_scope(Review)
   end
 
   private

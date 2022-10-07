@@ -5,7 +5,19 @@
         <h1><%= @flat.title %></h1>
         <h3 class=" py-4 text-muted"><%= @flat.description %></h3>
         <p>Located in <%= @flat.location %>, this flat has capacity for <%= @flat.capacity %> guest, you will have a <%= @flat.category %> just for yourself</p>
-        <%= link_to "New review", new_flat_review_path(@flat), class: "btn bt-primary" %>
+        <% if policy(@review).create? %>
+          <%= link_to "New review", new_flat_review_path(@flat), class: "btn bt-primary" %>
+        <% end %>
+        <h3 class="py-4 text-muted">Reviews</h3>
+        <% @reviews.each do |review| %>
+        <div class="notification">
+          <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+          <div class="notification-content">
+            <p><small><%= review.user.name %></small></p>
+            <p><%= review.comment %></p>
+          </div>
+        </div>
+        <% end %>
       </div>
     </div>
 
