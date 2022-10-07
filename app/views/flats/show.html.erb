@@ -5,6 +5,7 @@
         <h1><%= @flat.title %></h1>
         <h3 class="text-muted"><%= @flat.description %></h3>
         <p>Located in <%= @flat.location %>, this flat has capacity for <%= @flat.capacity %> guest, you will have a <%= @flat.category %> just for yourself</p>
+        <%= link_to "New review", new_flat_review_path(@flat), class: "btn bt-primary" %>
       </div>
     </div>
 
