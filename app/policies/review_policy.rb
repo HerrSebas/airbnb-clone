@@ -8,7 +8,7 @@ class ReviewPolicy < ApplicationPolicy
 
   def create?
     c = user.bookings.find { |booking| booking.flat_id == record.flat.id }
-    if c.present? && c.checkout_date < Date.today
+    if c.present? && c.checkout_date <= Date.today
       true
     else
       false
