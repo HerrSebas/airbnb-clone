@@ -1,15 +1,19 @@
 .main-container-navbar {
-  text-decoration: unset;
+  text-decoration:none;
   align-items: center;
   color: #ffffff;
 }
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: #0E4956;
+  background: rgb(88, 86, 184);
   height: 75px;
   display: flex;
   padding: 10px;
+  border-bottom: 1px solid #bdbcbc;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -35,4 +39,16 @@ h3 {
 
 .navlink-color {
   color: #fff
+}
+
+.logo-domain {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.welcome-user{
+  color: #ffffff !important;
+  font-size: 20px !important;
+  font-weight: 200;
+  padding-left: 30px;
 }
