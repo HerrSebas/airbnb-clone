@@ -2,10 +2,8 @@
   display: flex;
   padding: 30px;
   justify-content: center;
-  background-image: linear-gradient(rgba(240, 240, 245, 0.5), rgba(255, 255, 251, 0.5)),
-                  url("../../images/planes.webp");
+  background-image: linear-gradient(rgba(223, 208, 242, 0.4), rgba(239, 239, 239, 0.4));
   margin-bottom: 110px;
-
 }
 
 .grid-container {
@@ -19,8 +17,8 @@
 
 }
 .card-img-show {
-  border-radius: 2px;
-  height: 450px;
+  border-radius: 10px;
+  height: 360px;
   width: 600px;
 }
 
