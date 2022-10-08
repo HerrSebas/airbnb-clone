@@ -4,6 +4,8 @@
   justify-content: center;
   background-image: linear-gradient(rgba(240, 240, 245, 0.5), rgba(255, 255, 251, 0.5)),
                   url("../../images/planes.webp");
+  margin-bottom: 110px;
+
 }
 
 .grid-container {
@@ -20,6 +22,11 @@
   border-radius: 2px;
   height: 450px;
   width: 600px;
+}
+
+.card-img-bookings{
+  height: 250px !important;
+  width: 250 !important;
 }
 
 .flip-card {
