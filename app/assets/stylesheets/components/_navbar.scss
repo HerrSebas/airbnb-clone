@@ -4,6 +4,13 @@
   color: #ffffff;
 }
 
+.navbar-container {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  
+}
 .navbar-lewagon {
   justify-content: space-between;
   background: rgb(88, 86, 184);

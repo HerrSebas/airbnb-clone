@@ -1,12 +1,13 @@
-<%= simple_form_for @flat do |f| %>
-  <%= f.input :title %>
-  <%= f.input :location %>
-  <%= f.input :price %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :capacity %>
-  <%= f.input :category %>
-  <div class="pt-2 text-center">
-    <%= f.button :submit, class: 'button-50' %>
-  </div>
-<% end %>
+
+  <%= simple_form_for @flat do |f| %>
+    <%= f.input :title %>
+    <%= f.input :location %>
+    <%= f.input :price %>
+    <%= f.input :description %>
+    <%= f.input :photo, as: :file %>
+    <%= f.input :capacity %>
+    <%= f.input :category %>
+    <div class="pt-2 text-center">
+      <%= f.button :submit, class: 'button-50' %>
+    </div>
+  <% end %>

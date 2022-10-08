@@ -1,14 +1,17 @@
 .main-container {
   display: flex;
   padding: 30px;
+  justify-content: center;
 }
 
 .grid-container {
   display: flex;
   justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   flex-wrap: wrap;
+  padding-top: 100px;
+  width: 70%;
 }
 .card-img-show {
   border-radius: 2px;
