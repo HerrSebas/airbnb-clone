@@ -3,7 +3,7 @@
     <% @bookings.each do |booking| %>
     <div class="card" style="width: 18rem;">
       <% if booking.flat.photo.present? %>
-        <%= cl_image_tag booking.flat.photo.key, class: "card-img-top" %>
+        <%= cl_image_tag booking.flat.photo.key, class: "card-img-bookings" %>
       <% end %>
       <div class="card-body">
         <h5 class="card-title-bookings"><%= booking.flat.title %></h5>
