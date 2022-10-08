@@ -2,11 +2,13 @@
   text-align: center;
   padding: 30px;
   background-color: #fff;
+  position: fixed;
+  width: 100%;
   bottom: 0;
 }
 
 .fa-github {
-  color: #0e4956;
+  color: #5856B8;
 }
 
 .container-review-form {
@@ -16,4 +18,11 @@
   width: 70%;
   margin-bottom: 200px;
   align-items: center;
+}
+
+.container-booking-new {
+  margin-top: 150px;
+  justify-content: center;
+  margin-left: 200px;
+  margin-right: 200px;
 }
