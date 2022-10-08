@@ -13,7 +13,7 @@
             <%= link_to "New review", new_flat_review_path(@flat), class: "btn bt-primary" %>
           <% end %>
         <% end  %>
-        <h3 class="py-4 text-muted">Reviews</h3>
+        <h3 class="py-4 text-muted card-title-bookings">Reviews</h3>
           <% @reviews.each do |review| %>
         <div class="notification">
           <%= cl_image_tag review.user.photo.key, class: "avatar-large" %>
@@ -37,7 +37,7 @@
             </p>
           <% else %>
             <div class="card-buttons">
-            <%= link_to "Sign in to book this Flat!", new_flat_booking_path(@flat), class: "btn btn-primary" %>
+            <%= link_to "Sign in to book this Flat!", new_flat_booking_path(@flat), class: "btn btn-purple" %>
             </div>
           <% end %>
         </div>
