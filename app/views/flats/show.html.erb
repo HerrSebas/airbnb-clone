@@ -5,6 +5,9 @@
         <h1><%= @flat.title %></h1>
         <h3 class=" py-4 text-muted"><%= @flat.description %></h3>
         <p>Located in <%= @flat.location %>, this flat has capacity for <%= @flat.capacity %> guest, you will have a <%= @flat.category %> just for yourself</p>
+        <% if @flat.photo.present? %>
+          <%= cl_image_tag @flat.photo.key, class: "card-img-show" %>
+        <% end %>
         <% if user_signed_in?  %>
           <% if policy(@review).create? %>
             <%= link_to "New review", new_flat_review_path(@flat), class: "btn bt-primary" %>
@@ -18,8 +21,7 @@
             <p><small><%= review.user.name %></small></p>
             <p><%= review.comment %></p>
           </div>
-        </div>
-        <% end %>
+        </div> 
       </div>
     </div>
 

@@ -9,18 +9,18 @@
             <% end  %>
         </div>
         <div class="flip-card-back">
-          <h2 class="card-title"><%=flat.title%></h2>
+          <h5 class="card-title"><%=flat.title%></h5>
           <p class="card-description"><%=flat.description%></p>
           <div class="card-info">
-            <p><%= flat.location %></p>
+            <p class="card-info-details-p"><i class="fa-solid fa-location-dot"></i></i> <%= flat.location %></p>
             <div class="card-info-details">
-              <span class="card-info-details-span" style="padding-left: 0; padding-right: 50px;"><%= flat.category %></span>
-              <span class="card-info-details-span"><%= flat.capacity %> Single Beds</span>
+              <p class="card-info-details-p" style="padding-left: 0; padding-right: 50px;"><i class="fa-solid fa-house"></i> <%= flat.category %></p>
+              <p class="card-info-details-p"><i class="fa-solid fa-bed"></i> <%= flat.capacity %> Single Beds</p>
             </div>
             <h5 class="card-text-price">$ <%= flat.price%> night</h5>
           </div>
             <div class="card-buttons">
-              <%= link_to "Book now", new_flat_booking_path(flat), class: "btn btn-primary" %>
+              <%= link_to "Book now", new_flat_booking_path(flat), class: "btn btn-purple" %>
               <%= link_to "Details", flat_path(flat), class: "btn btn-light ms-3" %>
             </div>
         </div>
