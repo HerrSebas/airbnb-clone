@@ -8,17 +8,37 @@
         <% if @flat.photo.present? %>
           <%= cl_image_tag @flat.photo.key, class: "card-img-show" %>
         <% end %>
+        <% if user_signed_in?  %>
+          <% if policy(@review).create? %>
+            <%= link_to "New review", new_flat_review_path(@flat), class: "btn bt-primary" %>
+          <% end %>
+        <% end  %>
+        <h3 class="py-4 text-muted">Reviews</h3>
+        <% @reviews.each do |review| %>
+        <div class="notification">
+          <%= cl_image_tag review.user.photo.key, class: "avatar-large" %>
+          <div class="notification-content">
+            <p><small><%= review.user.name %></small></p>
+            <p><%= review.comment %></p>
+          </div>
+        </div> 
       </div>
     </div>
 
     <div class="col-6">
       <div class="card text-center col-md-6 ms-auto p-2 flex-fill" style="width: 430px;">
         <div class="card-body">
-          <h5 class="card-title fw-light fs-3 d-flex justify-content-evenly pt-3">$<%= @flat.price %> USD</h5>
+          <h5 class="card-title fw-light fs-3 d-flex justify-content-evenly pt-3 text-muted">$<%= @flat.price %> USD</h5>
           <h6 class="card-subtitle mb-2 text-muted">night</h6>
-          <p class="card-text">
-            <%= render "bookings/form" %>
-          </p>
+          <% if user_signed_in? %>
+            <p class="card-text">
+              <%= render "bookings/form" %>
+            </p>
+          <% else %>
+            <div class="card-buttons">
+            <%= link_to "Sign in to book this Flat!", new_flat_booking_path(@flat), class: "btn btn-primary" %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
