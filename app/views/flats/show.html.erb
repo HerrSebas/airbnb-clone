@@ -14,14 +14,15 @@
           <% end %>
         <% end  %>
         <h3 class="py-4 text-muted">Reviews</h3>
-        <% @reviews.each do |review| %>
+          <% @reviews.each do |review| %>
         <div class="notification">
           <%= cl_image_tag review.user.photo.key, class: "avatar-large" %>
           <div class="notification-content">
             <p><small><%= review.user.name %></small></p>
             <p><%= review.comment %></p>
           </div>
-        </div> 
+        </div>
+          <% end %>
       </div>
     </div>
 
